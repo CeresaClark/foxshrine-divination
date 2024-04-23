@@ -1,0 +1,175 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.box{
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+}
+
+.bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(img/bg/bg.png)no-repeat;
+}
+
+.ringL1,.ringL2,.ringL3,.ringL4,.ringR1,.ringR2,.ringR3,.ringR4{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: ring 2s alternate infinite ease-in-out;
+}
+.ringL1{
+    background: url(img/bg/L1.png)no-repeat;
+    transform-origin: 457px 341px;
+}
+.ringL2{
+    background: url(img/bg/L2.png)no-repeat;
+    transform-origin: 615px 273px;
+}
+.ringL3{
+    background: url(img/bg/L3.png)no-repeat;
+    transform-origin: 766px 361px;
+}
+.ringL4{
+    background: url(img/bg/L4.png)no-repeat;
+    transform-origin: 904px 357px;
+}
+.ringR1{
+    background: url(img/bg/R1.png)no-repeat;
+    transform-origin: 1469px 339px;
+}
+.ringR2{
+    background: url(img/bg/R2.png)no-repeat;
+    transform-origin: 1320px 265px;
+}
+.ringR3{
+    background: url(img/bg/R3.png)no-repeat;
+    transform-origin: 1212px 347px;
+}
+.ringR4{
+    background: url(img/bg/R4.png)no-repeat;
+    transform-origin: 1054px 360px;
+}
+
+.cloudL{
+    position: absolute;
+    left: -100px;
+    width: 922px;
+    height: 509px;
+    background: url(img/bg/cloudL.png)no-repeat;
+    animation: cloud-animate-L 10s alternate infinite linear;
+}
+
+.cloudR{
+    position: absolute;
+    right: 0;
+    width: 827px;
+    height: 629px;
+    background: url(img/bg/cloudR.png)no-repeat;
+    animation: cloud-animate-R 10s alternate-reverse infinite linear;
+}
+
+.cloudBig{
+    position: absolute;
+    left: 0;
+    width: 2200px;
+    height: 1080px;
+    background: url(img/bg/bigcloud.png)no-repeat;
+    opacity: 0.5;
+    animation: cloud-animate-big 20s alternate-reverse infinite linear;
+}
+
+#video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.button{
+    position: absolute;
+    top: 450px;
+    left: 823px;
+    width: 274px;
+    height: 288px;
+    background: url(img/bg/botton.png)no-repeat;
+    background-position: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(0.7);
+}
+
+.button:hover{
+    background: url(img/bg/botton-hover.png)no-repeat;
+    background-position: 50%;
+    filter: drop-shadow(0 0 20px #ffee8e);
+}
+
+.white{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    display: none;
+}
+
+.black{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.re{
+    position: absolute;
+    top: -700px;
+    left: 710px;
+    width: 500px;
+    height: 700px;
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(img/result/1.png);
+}
+
+@keyframes cloud-animate-L{
+    0%{
+        left: -100px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+
+@keyframes cloud-animate-R{
+    0%{
+        right: 0px;
+    }
+    100%{
+        right: -100px;
+    }
+}
+
+@keyframes cloud-animate-big{
+    0%{
+        left: 0px;
+    }
+    100%{
+        left: -280px;
+    }
+}
+
+@keyframes ring{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(30deg);
+    }
+}
