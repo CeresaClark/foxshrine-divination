@@ -17,6 +17,10 @@ body{
     background: url(img/bg/bg.png)no-repeat;
 }
 
+.bg2{
+    animation: bg-animate 1s 1 alternate ease-in-out;
+}
+
 .ringL1,.ringL2,.ringL3,.ringL4,.ringR1,.ringR2,.ringR3,.ringR4{
     position: absolute;
     width: 100%;
@@ -171,5 +175,14 @@ body{
     }
     100%{
         transform: rotateZ(30deg);
+    }
+}
+
+@keyframes bg-animate{
+    0%{
+        transform: perspective(250px)translateZ(0px);
+    }
+    100%{
+        transform: perspective(250px)translateZ(150px);
     }
 }
