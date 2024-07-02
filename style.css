@@ -17,6 +17,97 @@ body{
     background: url(img/bg/bg.png)no-repeat;
 }
 
+.star{display: none;}
+
+.star1,.star2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(img/qixi/bg/star1.png)no-repeat;
+    animation: qixistar1 1s alternate infinite linear;
+}
+
+.star2{
+    background-image: url(img/qixi/bg/star2.png);
+    animation: qixistar2 1s alternate infinite linear;
+}
+
+.skylight{
+    position: absolute;
+    width: 188px;
+    height: 220px;
+    background-image: url(img/qixi/bg/skylight.png);
+    top: 100%;
+    pointer-events: none;
+    display: none;
+}
+
+.skylight1{
+    left: 10%;
+    animation: skylight 12s linear 10s infinite;
+}
+
+.skylight2{
+    left: 30%;
+    transform: scale(0.8);
+    animation: skylight 20s linear 5s infinite;
+}
+
+.skylight3{
+    left: 80%;
+    transform: scale(0.7);
+    animation: skylight 10s linear 3s infinite;
+}
+
+.skylight4{
+    left: 50%;
+    transform: scale(0.4);
+    animation: skylight 15s linear 8s infinite;
+}
+
+.skylight5{
+    left: 60%;
+    animation: skylight 7s linear 0s infinite;
+}
+
+.skylight6{
+    left: 5%;
+    transform: scale(0.35) ;
+    animation: skylight 12s linear 2s infinite;
+}
+
+.skylight7{
+    left: 25%;
+    transform: scale(0.4) ;
+    animation: skylight 20s linear 5s infinite;
+}
+
+.skylight8{
+    left: 90%;
+    transform: scale(0.2) ;
+    animation: skylight 12s linear 1s infinite;
+}
+
+.skylight9{
+    left: 55%;
+    transform: scale(0.25) ;
+    animation: skylight 15s linear 7s infinite;
+}
+
+.skylight10{
+    left: 42%;
+    transform: scale(0.3) ;
+    animation: skylight 9s linear 0s infinite;
+}
+
+.qixi-bg2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(img/qixi/bg/bg2.png)no-repeat;
+    display: none;
+}
+
 .bg2{
     animation: bg-animate 1s 1 alternate ease-in-out;
 }
@@ -86,10 +177,12 @@ body{
     background: url(img/bg/bigcloud.png)no-repeat;
     opacity: 0.5;
     animation: cloud-animate-big 20s alternate-reverse infinite linear;
+    pointer-events: none;
 }
 
-#video{
+#video,#video2{
     position: absolute;
+    top: 0;
     width: 100%;
     height: 100%;
     display: none;
@@ -112,6 +205,17 @@ body{
     background: url(img/bg/botton-hover.png)no-repeat;
     background-position: 50%;
     filter: drop-shadow(0 0 20px #ffee8e);
+}
+
+.qixibtn{
+    position: absolute;
+    width: 90px;
+    height: 125px;
+    left: 50%;
+    top: 185px;
+    translate: -47%;
+    cursor: pointer;
+    z-index: 999;
 }
 
 .white{
@@ -139,7 +243,6 @@ body{
     background-position: 50%;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(img/result/1.png);
 }
 
 @keyframes cloud-animate-L{
@@ -184,5 +287,46 @@ body{
     }
     100%{
         transform: perspective(250px)translateZ(150px);
+    }
+}
+
+@keyframes qixistar1{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes qixistar2{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes skylight{
+    0%{
+        top: 100%;
+        rotate: 0deg;
+    }
+    20%{
+        rotate: 7deg;
+    }
+    40%{
+        rotate: -10deg;
+    }
+    60%{
+        rotate: 5deg;
+    }
+    80%{
+        rotate: -7deg;
+    }
+    100%{
+        top: -16%;
+        rotate: 0deg;
     }
 }
